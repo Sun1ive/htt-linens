@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     Hello world
   </div>
 </template>
@@ -16,6 +16,6 @@ export default Vue.extend({});
   -webkit-font-smoothing antialiased
   -moz-osx-font-smoothing grayscale
   text-align center
-  color #2c3e50
+  color $blue
 
 </style>
