@@ -1,7 +1,6 @@
 {
   "plugins": {
-    "autoprefixer": {},
-    "cssnano": {},
+    "postcss-cssnext": {},
     "rucksack-css": {}
   }
 }

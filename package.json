@@ -28,6 +28,7 @@
     "babel-core": "^7.0.0-0",
     "cssnano": "^3.10.0",
     "lint-staged": "^6.0.0",
+    "postcss-cssnext": "^3.1.0",
     "rucksack-css": "^1.0.2",
     "rupture": "^0.7.1",
     "stylus": "^0.54.5",
