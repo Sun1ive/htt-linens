@@ -2,14 +2,24 @@
   <div class="kits">
     <wrapper>
       <h1 class="main__title">Комплекты</h1>
+      <LinenCard
+        :title="'Hello therE!'"
+        :price="'150 grn'"
+        :desc="'hello world'"
+      />
     </wrapper>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import LinenCard from './LinenCard.vue';
 
-export default Vue.extend({});
+export default Vue.extend({
+  components: {
+    LinenCard,
+  },
+});
 </script>
 
 
