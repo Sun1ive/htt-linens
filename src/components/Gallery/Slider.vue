@@ -1,21 +1,26 @@
 <template>
-  <Slider :loop="true" :items="1" :mouse-drag="true">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-  </Slider>
+  <carousel
+    :autoplay="true"
+    :perPage="1"
+    :navigationClickTargetSize="20"
+    :paginationEnabled="false"
+    :speed="2000"
+    navigationEnabled
+  >
+    <slide>
+      <img src="/bed.png" alt="bed example">
+    </slide>
+    <slide>
+      <img src="/bed.png" alt="bed example">
+    </slide>
+  </carousel>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import VueTinySlider from 'vue-tiny-slider';
 
 export default Vue.extend({
-  components: {
-    Slider: VueTinySlider,
-  },
+  components: {},
   data: () => ({
     items: ['/bed.png', '/bed.png'],
   }),
@@ -24,5 +29,7 @@ export default Vue.extend({
 
 
 <style scoped lang="stylus">
-
+img
+  width 100%
+  height 100%
 </style>

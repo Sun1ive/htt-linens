@@ -7,14 +7,18 @@
     "build": "vue-cli-service build",
     "test": "vue-cli-service test",
     "lint": "vue-cli-service lint",
-    "dev": "yarn run serve"
+    "dev": "yarn run serve",
+    "postbuild": "react-snap"
+  },
+  "reactSnap": {
+    "source": "dist"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "register-service-worker": "^1.2.0",
     "swiper": "^4.2.2",
     "vue": "^2.5.16",
-    "vue-tiny-slider": "^0.1.17"
+    "vue-carousel": "^0.7.3"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.0.0-beta.46",
@@ -32,6 +36,7 @@
     "cssnano": "^3.10.0",
     "lint-staged": "^6.0.0",
     "postcss-cssnext": "^3.1.0",
+    "react-snap": "^1.12.2",
     "rucksack-css": "^1.0.2",
     "rupture": "^0.7.1",
     "stylus": "^0.54.5",

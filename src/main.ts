@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import VueCarousel from 'vue-carousel';
 import Button from '@/components/Shared/Button.vue';
 import Wrapper from '@/components/Shared/Wrapper.vue';
 import Modal from '@/components/Shared/Modal.vue';
@@ -11,6 +12,8 @@ Vue.component('Wrapper', Wrapper);
 Vue.component('Modal', Modal);
 
 Vue.config.productionTip = false;
+
+Vue.use(VueCarousel);
 
 new Vue({
   render: h => h(App),
