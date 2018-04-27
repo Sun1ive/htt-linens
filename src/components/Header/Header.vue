@@ -18,8 +18,7 @@ export default Vue.extend({
 
 <style scoped lang="stylus">
 .header
-  background-image url('/header.png')
-  background-position center
+  background url('/header.png') no-repeat
   background-size cover
   min-height 700px
 </style>

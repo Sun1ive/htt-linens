@@ -1,5 +1,6 @@
 <template>
-  <nav>
+  <nav class="toolbar">
+    <img src="/logo.png" alt="logo">
     <ul class="menu">
       <li
         v-for="item in toolbarList"
@@ -8,6 +9,13 @@
         <a href="#" class="menu__item">{{ item.title }}</a>
       </li>
     </ul>
+    <div class="phone__wrapper">
+      <img src="/phone.png" alt="phone">
+      <div class="phone__number">
+        <strong>+7 (989) 757-82-67</strong>
+        <div class="phone__request">Заказать обратный звонок</div>
+      </div>
+    </div>
   </nav>
 </template>
 
@@ -36,6 +44,12 @@ export default Vue.extend({
 ul li
   list-style none
 
+.toolbar
+  padding-top 1%
+  display flex
+  align-items center
+  justify-content space-around
+
 .menu
   font-family MullerBold
   display flex
@@ -46,8 +60,27 @@ ul li
   transition .2s linear
   will-change border-radius, background-color, color
   padding 1rem 2rem
+  border-radius 30px
+  margin 0 1rem
   &:hover
     background-color $blue
-    border-radius 30px
     color #fff
+
+.phone__wrapper
+  display flex
+  align-items center
+  justify-content space-around
+  font-family MullerBold
+  width 175px
+  .phone__number
+    position relative
+    margin-left 0.75rem
+    .phone__request
+      position absolute
+      width 200px
+      margin-top 0.2rem
+      font-family Muller
+      color $blue
+      cursor pointer
+
 </style>
