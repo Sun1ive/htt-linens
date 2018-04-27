@@ -38,15 +38,21 @@ export default Vue.extend({
 
 <style scoped lang="stylus">
 .card
-  box-shadow 0px 2px 26px rgba(#a3bbc1, .25)
+  box-shadow 0px 2px 26px rgba(#a3bbc1, .5)
   border-radius 4px
   background-color #fff
-  max-width 270px
+  max-width 265px
   font-family MullerBold
   color $darkgrey
+  transition .2s linear
+  overflow hidden
+  will-change cursor, box-shadow, transform
+  &:hover
+    cursor pointer
+    transform scale(1.02)
   &__box
-    margin 1.5rem
     padding 1rem 0
+    margin 1.5rem
     h3
       font-size 1.4rem
     strong
