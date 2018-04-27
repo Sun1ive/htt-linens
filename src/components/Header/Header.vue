@@ -3,7 +3,7 @@
     <wrapper>
       <Toolbar />
       <div class="header__container">
-        <h1>Постельное белье и аксессуары</h1>
+        <h1 class="main__title">Постельное белье и аксессуары</h1>
         <h2>Мы сделаем ваш дом уютнее!</h2>
         <div>
           <Button class="btn mr-2">Перейти в каталог</Button>
@@ -68,11 +68,6 @@ export default Vue.extend({
   &__container
     text-align center
     padding-top 16%
-    h1
-      font-size 4.2rem
-      color $blue
-      font-family MullerBold
-      margin 0
     h2
       font-size 3rem
       color $grey

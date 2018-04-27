@@ -1,6 +1,8 @@
 <template>
   <div class="kits">
-    <h1>hello</h1>
+    <wrapper>
+      <h1 class="main__title">Комплекты</h1>
+    </wrapper>
   </div>
 </template>
 
@@ -16,5 +18,8 @@ export default Vue.extend({});
   background url('/category.png') no-repeat #fafafa
   background-size cover
   min-height 1300px
+  .main__title
+    padding-top 150px
+    text-align center
 
 </style>
