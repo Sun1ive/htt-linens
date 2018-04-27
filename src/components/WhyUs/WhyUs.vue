@@ -1,20 +1,25 @@
 <template>
   <div class="about">
-    <h1 class="main__title">Почему мы лучшие</h1>
-    <Block
-      v-for="item in items"
-      :key="item.id"
-      :title="item.title"
-      :text="item.text"
-      :icon="item.icon"
-      :id="item.id"
-    />
+    <wrapper>
+      <h1 class="main__title">Почему мы лучшие</h1>
+      <div class="block__row">
+        <Block
+          v-for="item in items"
+          :key="item.id"
+          :title="item.title"
+          :text="item.text"
+          :icon="item.icon"
+          :id="item.id"
+        />
+      </div>
+    </wrapper>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import Block from './Block.vue';
+import Items from './Items';
 
 interface Block {
   icon: string;
@@ -28,39 +33,20 @@ export default Vue.extend({
     Block,
   },
   data: () => ({
-    items: [
-      {
-        icon: './medal.png',
-        title: 'Качество',
-        text:
-          'Равным образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия. ',
-        id: 1,
-      },
-      {
-        icon: './diamond.png',
-        title: 'Качество',
-        text:
-          'Равным образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия. ',
-        id: 2,
-      },
-      {
-        icon: './shield.png',
-        title: 'Качество',
-        text:
-          'Равным образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия. ',
-        id: 3,
-      },
-      {
-        icon: './care.png',
-        title: 'Качество',
-        text:
-          'Равным образом новая модель организационной деятельности способствует подготовки и реализации систем массового участия. ',
-        id: 4,
-      },
-    ] as Block[],
+    items: Items as Block[],
   }),
 });
 </script>
 
-<style scoped>
+<style scoped lang="stylus">
+.about
+  padding 5rem 0
+  border-bottom 1px solid #fafafa
+  .main__title
+    text-align center
+    padding-bottom 2rem
+
+.block__row
+  display flex
+  justify-content space-around
 </style>

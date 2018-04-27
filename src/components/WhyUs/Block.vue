@@ -35,6 +35,17 @@ export default Vue.extend({
 <style scoped lang="stylus">
 .Adv__block__header
   position relative
+  font-size 1.2rem
+  color $blue
+  font-family MullerBold
   &:before
     content ""
+  &:after
+    content ""
+    border 1px solid #eee
+    position absolute
+    width 60px
+    top 50%
+    right 10%
+    transform translateY(-50%)
 </style>
