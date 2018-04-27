@@ -13,7 +13,10 @@
           @showModal="showModal"
         />
       </div>
-      <Modal v-if="isActive"/>
+      <Modal
+        v-if="isActive"
+        @close="isActive = false"
+      />
     </wrapper>
   </div>
 </template>
@@ -40,7 +43,6 @@ export default Vue.extend({
   }),
   methods: {
     showModal(title: string) {
-      console.log('---', title);
       this.isActive = true;
     },
   },
@@ -61,6 +63,7 @@ export default Vue.extend({
   display flex
   flex-wrap wrap
   justify-content space-between
+  padding-top 5rem
   .linenCard
     margin 1rem 0
 </style>

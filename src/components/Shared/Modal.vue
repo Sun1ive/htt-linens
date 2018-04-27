@@ -2,6 +2,10 @@
   <transition name="modal">
     <div class="modal-mask">
       <div class="modal-container">
+        <div
+          class="close"
+          @click="$emit('close')"
+        />
         <slot />
       </div>
     </div>
@@ -31,6 +35,19 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
+  min-width 300px
+  min-height 100px
+  position relative
+  .close
+    position absolute
+    top 10px
+    right 0
+    background url('../../assets/close.svg') no-repeat
+    width 40px
+    height 40px
+    transition .2s
+    &:hover
+      cursor pointer
 
 .modal-enter
   opacity: 0

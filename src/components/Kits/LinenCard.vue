@@ -52,7 +52,7 @@ export default Vue.extend({
   will-change cursor, box-shadow, transform
   &:hover
     cursor pointer
-    transform scale(1.02)
+    transform scale(1.01)
   &__box
     padding 1rem 0
     margin 1.5rem
