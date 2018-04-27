@@ -1,5 +1,24 @@
 @import './fonts.styl'
 
+html
+  font-size 14px
+
 .wrapper
   max-width 1180px
   margin 0 auto
+
+.btn
+  padding 1rem 2.5rem
+  border-radius: 30px
+  border 1px solid $blue
+  color $blue
+  background-color transparent
+  font-size 1.1rem
+  font-family MullerBold
+  transition .2s linear
+  will-change:  background-color, color
+  outline-color transparent
+  &:hover
+    background-color $blue
+    color #fff
+    cursor pointer
