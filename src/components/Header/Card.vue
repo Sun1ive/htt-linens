@@ -34,5 +34,10 @@ export default Vue.extend({
   justify-content flex-end
   font-size 1.1rem
   font-family MullerBold
+  transition .25s linear
+  will-change box-shadow, cursor
+  &:hover
+    box-shadow 1px 1px 10px rgba($blue, .7)
+    cursor pointer
 
 </style>
