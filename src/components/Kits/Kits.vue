@@ -10,8 +10,10 @@
           :price="item.price"
           :desc="item.desc"
           class="linenCard"
+          @showModal="showModal"
         />
       </div>
+      <Modal v-if="isActive"/>
     </wrapper>
   </div>
 </template>
@@ -34,7 +36,14 @@ export default Vue.extend({
   },
   data: () => ({
     Linens: Linens as Linen[],
+    isActive: false,
   }),
+  methods: {
+    showModal(title: string) {
+      console.log('---', title);
+      this.isActive = true;
+    },
+  },
 });
 </script>
 

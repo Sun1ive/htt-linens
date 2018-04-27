@@ -5,7 +5,10 @@
       <h3>{{ title }}</h3>
       <p>{{ desc }}</p>
       <strong>{{ price }}</strong>
-      <Button class="btn-red">Узнать цену</Button>
+      <Button
+        class="btn-red"
+        @click="$emit('showModal', title)"
+      >Узнать цену</Button>
     </div>
   </div>
 </template>
