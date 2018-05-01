@@ -2773,7 +2773,7 @@ dom-serializer@0, dom-serializer@~0.1.0:
     domelementtype "~1.1.1"
     entities "~1.1.1"
 
-dom7@^2.0.3:
+dom7@^2.0.3, dom7@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.0.5.tgz#d99e1f416cacd627c6d3ed7b90be47c8f3c7b258"
   dependencies:
@@ -8341,6 +8341,13 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
+swiper@^4.0.7:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.2.5.tgz#46c0be7c69658212140054de8e6eb04f1261cfca"
+  dependencies:
+    dom7 "^2.0.5"
+    ssr-window "^1.0.0"
+
 swiper@^4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.2.2.tgz#56ccdfe7b4fdd4e282f4dcadafa2a001d050595e"
@@ -8873,9 +8880,12 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-carousel@^0.7.3:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/vue-carousel/-/vue-carousel-0.7.3.tgz#5febab5bb3be4bd12ada37df22efd189f8789465"
+vue-awesome-swiper@^3.1.3:
+  version "3.1.3"
+  resolved "https://registry.yarnpkg.com/vue-awesome-swiper/-/vue-awesome-swiper-3.1.3.tgz#05500b501ffb3fec9bf7eb9985bcf4ae8360ed9e"
+  dependencies:
+    object-assign "^4.1.1"
+    swiper "^4.0.7"
 
 vue-eslint-parser@^2.0.3:
   version "2.0.3"

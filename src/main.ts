@@ -1,5 +1,6 @@
 import Vue from 'vue';
-import VueCarousel from 'vue-carousel';
+import VueCarousel from 'vue-awesome-swiper';
+import 'swiper/dist/css/swiper.min.css';
 import Button from '@/components/Shared/Button.vue';
 import Wrapper from '@/components/Shared/Wrapper.vue';
 import Modal from '@/components/Shared/Modal.vue';
