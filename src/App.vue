@@ -5,6 +5,7 @@
       <Kits />
       <WhyUs />
       <Gallery />
+      <Reviews />
     </main>
   </div>
 </template>
@@ -15,6 +16,7 @@ import Header from './components/Header/Header.vue';
 import Kits from './components/Kits/Kits.vue';
 import WhyUs from './components/WhyUs/WhyUs.vue';
 import Gallery from './components/Gallery/Gallery.vue';
+import Reviews from './components/Reviews/Reviews.vue';
 
 export default Vue.extend({
   components: {
@@ -22,6 +24,7 @@ export default Vue.extend({
     Kits,
     WhyUs,
     Gallery,
+    Reviews,
   },
 });
 </script>

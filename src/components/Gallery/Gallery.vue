@@ -8,6 +8,7 @@
         <p>Краткое описание товара или не очень краткое описание</p>
       </div>
     </wrapper>
+    <div class="btn-red mt-2">Узнать цену</div>
   </section>
 </template>
 
@@ -23,13 +24,13 @@ export default Vue.extend({
 
 <style scoped lang="stylus">
 .gallery
-  min-height 500px
+  min-height 840px
   display flex
   justify-content center
   align-items center
+  flex-flow column wrap
   &__text
     text-align center
-    margin-top 2.5rem
     h2
       font-size 1.2rem
       font-family MullerBold
@@ -37,5 +38,5 @@ export default Vue.extend({
       opacity .75
   .main__title
     text-align center
-    margin 3rem 0 5rem
+    margin-bottom 3rem
 </style>
