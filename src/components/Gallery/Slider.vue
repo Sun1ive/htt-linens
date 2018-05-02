@@ -15,12 +15,12 @@ export default Vue.extend({
   data: () => ({
     slides: ['/bed.png', '/bed.png', '/bed.png', '/bed.png'],
     swiperOption: {
-      slidesPerView: 1,
       spaceBetween: 30,
       loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+      speed: 1200,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
       },
       navigation: {
         nextEl: '.swiper-button-next',
