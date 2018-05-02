@@ -6,6 +6,7 @@
       <WhyUs />
       <Gallery />
       <Reviews />
+      <TextContainer />
     </main>
   </div>
 </template>
@@ -17,6 +18,7 @@ import Kits from './components/Kits/Kits.vue';
 import WhyUs from './components/WhyUs/WhyUs.vue';
 import Gallery from './components/Gallery/Gallery.vue';
 import Reviews from './components/Reviews/Reviews.vue';
+import TextContainer from './components/Text/Text.vue';
 
 export default Vue.extend({
   components: {
@@ -25,6 +27,7 @@ export default Vue.extend({
     WhyUs,
     Gallery,
     Reviews,
+    TextContainer,
   },
 });
 </script>
