@@ -7,7 +7,7 @@
           <span>Адрес: Бишкек, ул. Ч.Валиханова 2</span>
           <span>бывш. Ч-Атинская 2-й этаж</span>
         </div>
-        <div class="column blue">
+        <div class="column blue mt-1">
           <span class="head">Время работы:</span>
           <span>9.00 - 19.00</span>
           <span>без выходных</span>
@@ -43,6 +43,10 @@
           <span>Контакты</span>
         </div>
       </div>
+      <div class="reserved">
+        <div>Компания **** © Все права защищены</div>
+        <div>2018</div>
+      </div>
     </div>
   </footer>
 </template>
@@ -59,6 +63,8 @@ export default Vue.extend({});
   display flex
   justify-content center
   align-items center
+  overflow hidden
+  position relative
 .footer__left
   background-color #f8fbfe
   color $blue
@@ -67,11 +73,13 @@ export default Vue.extend({});
   align-items flex-end
   justify-content center
   flex-basis 32%
-  padding-right 2.5rem
+  padding 1rem 2.75rem 1rem 0
+  max-height 330px
 .footer__right
   background-color: $blue;
   flex-grow 1
-  padding 1.75rem 0
+  padding 1rem 0
+  max-height 330px
   &__wrapper
     display flex
     justify-content space-around
@@ -90,12 +98,14 @@ export default Vue.extend({});
     align-items center
     will-change background-color, cursor
     transition .2s linear
+    width 49px
+    height 49px
     a
       color $blue
       font-size 1.2rem
       will-change color
       transition .2s linear
-      padding 1rem 1.301rem
+      padding 1.3rem
     &:hover
       background-color $blue
       a
@@ -110,10 +120,24 @@ export default Vue.extend({});
   .head
     font-family MullerBold
     font-size 1rem
-    line-height 2rem
+    line-height 1.5rem
   span
     margin .5rem 0
 
+span
+  &:hover
+    cursor pointer
+    color $darkgray
+
 .blue
   color $blue
+.reserved
+  display flex
+  justify-content space-between
+  width 70%
+  margin-left 5rem
+  padding 2rem 0 1rem
+  font-family MullerBold
+  font-size 1rem
+  color #fff
 </style>
