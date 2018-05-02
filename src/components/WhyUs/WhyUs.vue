@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <section class="about">
     <wrapper>
       <h1 class="main__title">Почему мы лучшие</h1>
       <div class="block__row">
@@ -13,7 +13,7 @@
         />
       </div>
     </wrapper>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
@@ -41,7 +41,7 @@ export default Vue.extend({
 <style scoped lang="stylus">
 .about
   padding 5rem 0
-  border-bottom 1px solid #fafafa
+  border-bottom 1px solid #ccc + 70%
   .main__title
     text-align center
     padding-bottom 2rem

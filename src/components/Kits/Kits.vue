@@ -1,5 +1,5 @@
 <template>
-  <div class="kits">
+  <section class="kits">
     <wrapper>
       <h1 class="main__title">Комплекты</h1>
       <div class="items">
@@ -18,7 +18,7 @@
         @close="isActive = false"
       />
     </wrapper>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">

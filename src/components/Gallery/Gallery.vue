@@ -1,10 +1,10 @@
 <template>
-  <div class="gallery">
+  <section class="gallery">
     <wrapper>
       <h1 class="main__title">Галерея</h1>
       <Slider />
     </wrapper>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
@@ -23,4 +23,7 @@ export default Vue.extend({
   display flex
   justify-content center
   align-items center
+  .main__title
+    text-align center
+    margin 3rem 0 5rem
 </style>
