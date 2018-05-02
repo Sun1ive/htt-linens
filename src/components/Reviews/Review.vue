@@ -35,6 +35,7 @@ export default Vue.extend({});
     margin auto
     font-size 1rem
     line-height 20px
+    color $darkgray
   &__info
     display flex
     align-items center
@@ -42,6 +43,11 @@ export default Vue.extend({});
     margin auto
     h2
       margin 1rem 1rem 1rem 0
+      line-height 1rem
+    span
+      font-size 1rem
+      opacity .28
+      color #000
   &__img
     position absolute
     left 25px

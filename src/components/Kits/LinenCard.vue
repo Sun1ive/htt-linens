@@ -46,7 +46,7 @@ export default Vue.extend({
   background-color #fff
   max-width 265px
   font-family MullerBold
-  color $darkgrey
+  color $darkgray
   transition .2s linear
   overflow hidden
   will-change cursor, box-shadow, transform
