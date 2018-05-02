@@ -8,6 +8,7 @@
       <Reviews />
       <TextContainer />
     </main>
+    <Footer />
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import WhyUs from './components/WhyUs/WhyUs.vue';
 import Gallery from './components/Gallery/Gallery.vue';
 import Reviews from './components/Reviews/Reviews.vue';
 import TextContainer from './components/Text/Text.vue';
+import Footer from './components/Footer/Footer.vue';
 
 export default Vue.extend({
   components: {
@@ -28,6 +30,7 @@ export default Vue.extend({
     Gallery,
     Reviews,
     TextContainer,
+    Footer,
   },
 });
 </script>
