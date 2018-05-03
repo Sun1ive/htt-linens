@@ -22,9 +22,11 @@ export default Vue.extend({});
 
 
 <style scoped lang="stylus">
+.company
+  padding 2rem 1rem
 .company__wrapper
   display flex
-  padding 2rem
+  padding 1rem
   p
     width 90%
     margin auto
