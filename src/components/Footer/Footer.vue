@@ -28,7 +28,7 @@
         </div>
         <div class="column">
           <span class="head">Компания</span>
-          <span @click="isActive = true">О компании</span>
+          <span @click="showModal">О компании</span>
           <span>Доставка и Оплата</span>
           <span>Возврат и Гарантия</span>
           <span>Акции</span>
@@ -59,11 +59,18 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { hidden } from '@/utils/body';
 import Company from './Company.vue';
 
 export default Vue.extend({
   components: { Company },
   data: () => ({ isActive: false }),
+  methods: {
+    showModal() {
+      hidden();
+      this.isActive = true;
+    },
+  },
 });
 </script>
 

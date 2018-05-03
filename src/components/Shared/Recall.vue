@@ -7,19 +7,42 @@
     <div class="form__inputs">
       <div class="input__group">
         <label>Ваше имя</label>
-        <input type="text" placeholder="Ваше имя" class="input" required>
+        <input
+          v-model.trim.lazy="FormData.username"
+          type="text"
+          placeholder="Ваше имя"
+          class="input"
+          required
+        >
       </div>
       <div class="input__group">
         <label>Ваш телефон</label>
-        <input type="text" placeholder="Ваш телефон" class="input" required>
+        <input
+          v-model.trim.lazy.number="FormData.phoneNumber"
+          type="text"
+          placeholder="Ваш телефон"
+          class="input"
+          required
+        >
       </div>
       <div class="input__group">
         <label>Ваш email</label>
-        <input type="email" placeholder="Ваш email" class="input" required>
+        <input
+          v-model.trim.lazy="FormData.email"
+          type="email"
+          placeholder="Ваш email"
+          class="input"
+          required
+        >
       </div>
       <div class="input__group">
         <label>Добавьте комментарий</label>
-        <input type="email" placeholder="Ваш комментарий" class="input">
+        <input
+          v-model.trim.lazy="FormData.comments"
+          type="email"
+          placeholder="Ваш комментарий"
+          class="input"
+        >
       </div>
     </div>
     <div class="button">
@@ -31,7 +54,23 @@
 <script lang="ts">
 import Vue from 'vue';
 
-export default Vue.extend({});
+interface IFormData {
+  username: string;
+  phoneNumber: number | null;
+  email: string;
+  comments: string;
+}
+
+export default Vue.extend({
+  data: () => ({
+    FormData: {
+      username: '',
+      phoneNumber: null,
+      email: '',
+      comments: '',
+    } as IFormData,
+  }),
+});
 </script>
 
 
@@ -39,9 +78,13 @@ export default Vue.extend({});
 .form
   padding 2rem
   min-width 330px
+  font-family Muller
   h4
     font-family Muller
     font-weight normal
+  h2
+    font-size responsive 1.3rem 2.1rem
+    font-family MullerBold
   .button
     text-align center
 .input
@@ -66,4 +109,8 @@ export default Vue.extend({});
 @media (min-width 1440px)
   .form
     width 600px
+
+@media (min-width 900px)
+  .form
+    width 550px
 </style>
