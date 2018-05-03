@@ -28,7 +28,7 @@
         </div>
         <div class="column">
           <span class="head">Компания</span>
-          <span>О компании</span>
+          <span @click="isActive = true">О компании</span>
           <span>Доставка и Оплата</span>
           <span>Возврат и Гарантия</span>
           <span>Акции</span>
@@ -44,17 +44,27 @@
         </div>
       </div>
       <div class="reserved">
-        <div>Компания **** © Все права защищены</div>
+        <div>Компания **** &copy; Все права защищены</div>
         <div>2018</div>
       </div>
     </div>
+    <Modal
+      v-if="isActive"
+      @close="isActive = !isActive"
+    >
+      <Company/>
+    </Modal>
   </footer>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import Company from './Company.vue';
 
-export default Vue.extend({});
+export default Vue.extend({
+  components: { Company },
+  data: () => ({ isActive: false }),
+});
 </script>
 
 

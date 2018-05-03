@@ -37,6 +37,22 @@ a
     color #fff
     cursor pointer
 
+.btn-blue
+  background-color $blue
+  border-radius: 10px
+  color #fff
+  font-family MullerBold
+  outline-color transparent
+  transition .2s linear
+  will-change: background-color, color, border-color
+  border 1px solid transparent
+  padding 1rem 2rem
+  &:hover
+    background-color #fff
+    border-color $blue
+    cursor pointer
+    color $blue
+
 .btn-red
   background-color $red
   border-radius: 3px
@@ -63,6 +79,7 @@ a
   color $blue
 
 .main__title
-  font-size 4.2rem
+  font-size responsive 1.2rem 4.2rem
   color $blue
   font-family MullerBold
+  text-align center

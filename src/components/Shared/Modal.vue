@@ -27,7 +27,6 @@
   align-items center
 
 .modal-container
-  padding 2rem
   border-radius 18px
   margin: 0px auto;
   padding: 20px 30px;
@@ -35,7 +34,8 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
   font-family: Helvetica, Arial, sans-serif;
-  min-width 300px
+  min-width 280px
+  max-width 70%
   min-height 100px
   position relative
   .close
@@ -43,6 +43,7 @@
     top 10px
     right 0
     background url('../../assets/close.svg') no-repeat
+    opacity .3
     width 40px
     height 40px
     transition .2s
