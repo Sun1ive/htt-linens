@@ -20,7 +20,7 @@
       v-if="isActive"
       @close="isActive = !isActive"
     >
-      <Recall />
+      <Recall @close="isActive = !isActive" />
     </Modal>
   </nav>
 </template>

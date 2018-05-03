@@ -1,5 +1,5 @@
 <template>
-  <form class="form">
+  <form class="form" @submit.prevent="onSubmit">
     <div>
       <h2>Закажите <span class="blue">обратный звонок</span></h2>
       <h4>Оставье заявку и мы свяжемся с вами.</h4>
@@ -39,20 +39,27 @@
         <label>Добавьте комментарий</label>
         <input
           v-model.trim.lazy="FormData.comments"
-          type="email"
+          type="text"
           placeholder="Ваш комментарий"
           class="input"
         >
       </div>
     </div>
     <div class="button">
-      <Button class="btn-blue">Отправить</Button>
+      <Button class="btn-blue" type="submit">Отправить</Button>
     </div>
+    <Modal
+      v-if="succeed"
+      @close="closeModals"
+    >
+      <Thank/>
+    </Modal>
   </form>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import Thank from '../Shared/Thank.vue';
 
 interface IFormData {
   username: string;
@@ -62,6 +69,7 @@ interface IFormData {
 }
 
 export default Vue.extend({
+  components: { Thank },
   data: () => ({
     FormData: {
       username: '',
@@ -69,7 +77,17 @@ export default Vue.extend({
       email: '',
       comments: '',
     } as IFormData,
+    succeed: false as boolean,
   }),
+  methods: {
+    onSubmit() {
+      this.succeed = true;
+    },
+    closeModals() {
+      this.succeed = false;
+      this.$emit('close');
+    },
+  },
 });
 </script>
 
