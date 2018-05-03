@@ -62,4 +62,8 @@ export default Vue.extend({});
       margin 5px 2px
       font-size responsive 1rem 1.2rem
       color $darkgray
+
+@media (min-width 1440px)
+  .form
+    width 600px
 </style>

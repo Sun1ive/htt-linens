@@ -4,13 +4,28 @@
       <div class="modal-container">
         <div
           class="close"
-          @click="$emit('close')"
+          @click="onClose"
         />
         <slot />
       </div>
     </div>
   </transition>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+import { removeHidden } from '@/utils/body';
+
+export default Vue.extend({
+  methods: {
+    onClose() {
+      removeHidden();
+      this.$emit('close');
+    },
+  },
+});
+</script>
+
 
 <style scoped lang="stylus">
 .modal-mask

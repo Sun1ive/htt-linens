@@ -13,7 +13,7 @@
       <img src="/phone.png" alt="phone">
       <div class="phone__number">
         <strong>+7 (989) 757-82-67</strong>
-        <div class="phone__request" @click="isActive = true">Заказать обратный звонок</div>
+        <div class="phone__request" @click="showModal">Заказать обратный звонок</div>
       </div>
     </div>
     <Modal
@@ -27,6 +27,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import { hidden } from '@/utils/body';
 import Recall from '../Shared/Recall.vue';
 
 interface ToolbarItem {
@@ -43,8 +44,14 @@ export default Vue.extend({
       { title: 'О компании', anchor: '#aa' },
       { title: 'Контакты', anchor: '#aa' },
     ] as ToolbarItem[],
-    isActive: true as boolean,
+    isActive: false as boolean,
   }),
+  methods: {
+    showModal() {
+      hidden();
+      this.isActive = true;
+    },
+  },
 });
 </script>
 
