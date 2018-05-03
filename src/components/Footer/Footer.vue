@@ -14,7 +14,7 @@
         </div>
         <ul class="socials">
           <li class="socials__item">
-            <a href="#"><i class="fa fa-facebook"/></a>
+            <a href="https://www.facebook.com/ParnaTisztitas/" target="_blank"><span class="fb"/></a>
           </li>
         </ul>
       </div>
@@ -69,12 +69,19 @@ export default Vue.extend({
 
 
 <style scoped lang="stylus">
+.fb
+  background-image url('../../assets/fb.svg')
+  background-repeat no-repeat
+  width 50px
+  height 50px
+  display flex
+  justify-content center
+  align-items center
+
 .footer
   display flex
   justify-content center
   align-items center
-  overflow hidden
-  position relative
 .footer__left
   background-color #f8fbfe
   color $blue
@@ -84,12 +91,12 @@ export default Vue.extend({
   justify-content center
   flex-basis 32%
   padding 1rem 2.75rem 1rem 0
-  max-height 330px
+  height 300px
 .footer__right
   background-color: $blue;
   flex-grow 1
   padding 1rem 0
-  max-height 330px
+  height 300px
   &__wrapper
     display flex
     justify-content space-around
@@ -97,29 +104,10 @@ export default Vue.extend({
 
 .socials
   margin 0
-  padding 2rem 0 1rem 0
+  padding 2rem 0 0 0
   display flex
   &__item
     list-style none
-    border-radius 50%
-    border 2px solid $blue
-    display flex
-    justify-content center
-    align-items center
-    will-change background-color, cursor
-    transition .2s linear
-    width 49px
-    height 49px
-    a
-      color $blue
-      font-size 1.2rem
-      will-change color
-      transition .2s linear
-      padding 1.3rem
-    &:hover
-      background-color $blue
-      a
-        color #fff
 
 .column
   display flex

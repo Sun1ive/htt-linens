@@ -1,6 +1,6 @@
 {
   "plugins": {
+    "rucksack-css": {},
     "postcss-cssnext": {},
-    "rucksack-css": {}
   }
 }

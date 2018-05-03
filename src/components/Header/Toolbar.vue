@@ -13,14 +13,21 @@
       <img src="/phone.png" alt="phone">
       <div class="phone__number">
         <strong>+7 (989) 757-82-67</strong>
-        <div class="phone__request">Заказать обратный звонок</div>
+        <div class="phone__request" @click="isActive = true">Заказать обратный звонок</div>
       </div>
     </div>
+    <Modal
+      v-if="isActive"
+      @close="isActive = !isActive"
+    >
+      <Recall />
+    </Modal>
   </nav>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import Recall from '../Shared/Recall.vue';
 
 interface ToolbarItem {
   title: string;
@@ -28,6 +35,7 @@ interface ToolbarItem {
 }
 
 export default Vue.extend({
+  components: { Recall },
   data: () => ({
     toolbarList: [
       { title: 'Комплекты', anchor: '#aa' },
@@ -35,6 +43,7 @@ export default Vue.extend({
       { title: 'О компании', anchor: '#aa' },
       { title: 'Контакты', anchor: '#aa' },
     ] as ToolbarItem[],
+    isActive: true as boolean,
   }),
 });
 </script>
